@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastro da liga dos astronautas</title>
+  </head>
+  <body>
+    <h3>Cadastro da liga dos astronautas</h3>
+    <form action="https://www.nasa.gov">
+      <div>
+        <label for="fullName"
+          >Nome: <input type="text" name="fullName" required
+        /></label>
+      </div>
+      <br />
+      <div>
+        <label for="email"
+          >Email: <input type="email" name="email" required
+        /></label>
+        <label for="password"
+          >-Password
+          <input type="password" name="password" id="password" required
+        /></label>
+      </div>
+      <br />
+      <div>
+        <label for="dataNascimento"
+          >Data de nascimento:
+          <input type="date" name="dataNascimento" id="dataNascimento" required
+        /></label>
+        <label for="photo"
+          >-Foto <input type="file" name="photo" id="photo" required
+        /></label>
+      </div>
+      <br />
+      <div>
+        <label for="nacionalidade"
+          >Nacionalidade
+          <select name="nacionalidade" id="nacionalidade" required>
+            <optgroup>
+              <option value="">Nacionalidade</option>
+              <option value="Brasileiro">Brasileiro</option>
+              <option value="Estadunidense">Estadunidense</option>
+              <option value="Mexicano">Mexicano</option>
+              <option value="Russo">Russo</option>
+              <option value="Japonês">Japonês</option>
+              <option value="Chinês">Chinês</option>
+              <option value="Espanhol">Espanhol</option>
+            </optgroup>
+          </select></label
+        >
+        <label for="Genre"
+          >- Gênero:
+          <input type="radio" name="Genre" value="male" required />Male<input
+            type="radio"
+            name="Genre"
+            value="female"
+            required
+          />Female<input
+            type="radio"
+            name="Genre"
+            value="others"
+            required
+          />Others</label
+        >
+      </div>
+      <br />
+      <div>
+        <label for="checkbox">Suas principais qualidades:</label>
+      </div>
+      <br />
+      <div>
+        Inteligência
+        <input type="checkbox" name="Inteligência" id="Inteligência" /> |
+        Resiliência
+        <input type="checkbox" name="Resiliência" id="Resiliência" /> | Preparo
+        físico <input type="checkbox" name="Preparo" id="Preparo" /> | Educação
+        <input type="checkbox" name="education" id="education" /> |
+      </div>
+      <br />
+      <div>
+        <textarea
+          name="description"
+          id="description"
+          cols="30"
+          rows="10"
+          placeholder="Por que você gostaria de ser astronauta?"
+        ></textarea>
+      </div>
+      <br />
+      <div>
+        <input type="submit" name="criar" id="create" value="Criar" />
+      </div>
+    </form>
+  </body>
+</html>

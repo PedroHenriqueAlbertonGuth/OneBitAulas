@@ -1,0 +1,27 @@
+.moon {
+  color: chocolate;
+}
+.bigText {
+  font-size: 40px;
+}
+#text-green {
+  color: aqua;
+  font-size: 18px;
+}
+li {
+  color: antiquewhite;
+}
+h1 {
+  color: cadetblue;
+  font-size: 70px;
+  border: 2px dashed orange;
+
+}
+h4 {
+  color: blueviolet;
+}
+body {
+  background-color: blue;
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/2/2b/Jupiter_and_its_shrunken_Great_Red_Spot.jpg");
+  background-size: cover;
+}

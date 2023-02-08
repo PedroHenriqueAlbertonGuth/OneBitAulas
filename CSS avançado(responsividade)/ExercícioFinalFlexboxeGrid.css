@@ -1,0 +1,138 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+.header {
+  background-color: rgb(51, 51, 51);
+  max-height: 15vh;
+}
+nav {
+  display: flex;
+  align-items: center;
+  flex-direction:row;
+  flex-wrap: wrap;
+  padding: 5vh;
+  justify-content: space-between;
+}
+.nav-button {
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  border: none;
+  color: rgb(199, 199, 199);
+  background-color: transparent;
+  font-size: 2.5vh;
+  margin-left: 2.5vh;
+}
+button:hover {
+  transition: 0,7s;
+  border-bottom: 0.3vh solid red;
+}
+.logo {
+  max-width: 30vh;
+}
+.page-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 3vh;
+}
+.page-title h1 {
+  margin-top: 3vh;
+  font-size: 4vh;
+}
+.page-title h1 p {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.page-title p {
+  font-size: 3vh;
+}
+.main-content {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-left: 5vh;
+  grid-template-areas: 
+  "Section Section Section Aside";
+}
+.main-sports {
+  grid-area: Section;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: minmax(30vh, auto);
+  grid-template-columns: minmax(35vh, auto);
+  gap: 2vh 1vh;
+  grid-template-areas: 
+  "boxe crossfit natacao"
+  "roupas basquete corrida"
+  "surf trilha tenis";
+}
+.sports img {
+  border-radius: 2vh;
+  width: 35vh;
+  height: 25vh;
+}
+.paragraph {
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 2vh;
+  font-weight: 500;
+}
+.extra-sports {
+  grid-area: Aside;
+  margin-right: 5vh;
+  border-radius: 2vh;
+  background-color: rgb(51, 51, 51);
+  color: rgb(199, 199, 199);
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 2vh;
+  font-weight: 500;
+}
+.extra {
+  margin-top: auto;
+  margin-bottom: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1vh;
+}
+.extra img {
+  width: 25vh;
+  height: 20vh;
+  border-radius: 2vh;
+}
+.extra p {
+  text-align: center;
+}
+.boxe {
+  grid-area: boxe;
+}
+.crossfit {
+  grid-area: crossfit;
+}
+.natacao {
+  grid-area: natacao;
+}
+.roupas {
+  grid-area: roupas;
+}
+.basquete {
+  grid-area: basquete;
+}
+.corrida {
+  grid-area: corrida;
+}
+.surf {
+  grid-area: surf;
+}
+.trilha {
+  grid-area: trilha;
+}
+.tenis {
+  grid-area: tenis;
+}
+.sports:hover {
+  border-radius: 2vh;
+  border: 0.3vh solid black;
+}
+.extra:hover {
+  border-radius: 2vh;
+  border: 0.3vh solid white;
+}

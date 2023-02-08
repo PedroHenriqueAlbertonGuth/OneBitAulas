@@ -1,0 +1,24 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+.container {
+  background-color: darkgrey;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr 1fr;
+  gap: 10px 15px;
+  grid-auto-rows: minmax(250px, auto);
+}
+.item {
+  flex-basis: 100%;
+  height: auto;
+  border: 2px solid black;
+  background-color: white;
+  justify-content: center;
+  padding: 10px;
+}
+.paragraph {
+  font-size: 20px;
+}

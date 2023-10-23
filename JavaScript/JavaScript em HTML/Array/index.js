@@ -1,12 +1,14 @@
 const listaDeCompras = ["Açúcar", false]
 console.log(listaDeCompras)
 
-listaDeCompras[0] = "Arroz"
-listaDeCompras[1] = "Feijão"
-listaDeCompras[2] = 7
-listaDeCompras[5] = "Batata"
+listaDeCompras[0] = "Sabonete"
+listaDeCompras[1] = "Macarrão"
+listaDeCompras[2] = 2
+listaDeCompras[5] = "Cebola"
+listaDeCompras[3] = {nome: "Arroz",
+                        quantidade: 2, }
 
 
 console.log(listaDeCompras)
 
-console.log(listaDeCompras[3])
+console.log(listaDeCompras[3].nome)

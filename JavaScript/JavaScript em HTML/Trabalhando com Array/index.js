@@ -23,7 +23,7 @@ lastElement = arr.shift()
 console.log(arr)
 console.log(lastElement)
 
-// Pesquisar por um element
+// Pesquisar por um elemento
 // includes
 const includes = arr.includes("Gandalf")
 console.log(includes)
@@ -40,3 +40,18 @@ console.log(arr)
 console.log(hobbits)
 console.log(others)
 
+// concat
+const society = hobbits.concat(others, "Boromir")
+console.log(society)
+
+// Substituição de elementos
+// splice
+const removedElements = society.splice(index, 1, "Gandalf, o cinzento")
+console.log(society)
+console.log(removedElements)
+
+// Iterar sobre os elementos
+for (let index = 0; index < society.length; index++) {
+  const element = society[index]
+  console.log(element + " se encontra na posição " + index)
+}

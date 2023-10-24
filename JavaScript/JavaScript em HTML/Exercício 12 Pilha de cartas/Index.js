@@ -12,11 +12,11 @@ do {
 
   if(promptOption === 1) {
     let newCard = prompt("Qual o nome da carta adicional?")
-    cardStack.unshift(newCard)
+    cardStack.push(newCard)
     alert("A carta " + newCard + " foi adicionada!")
   } else if (promptOption === 2) {
     if (cardStack.length > 0) {
-    let drawnCard = cardStack.shift()
+    let drawnCard = cardStack.pop()
     alert("Você puxou a carta " + drawnCard)
     } else {
       alert("As cartas acabaram! Adicione mais ou saia para recolocar as cartas.")

@@ -25,6 +25,10 @@ const  matriz = [
 
 console.table(matriz)
 
+matriz.push(["Nova linha"])
+matriz[0].push("Nova coluna")
+
+console.table(matriz)
 
 for (let i = 0; i < matriz.length; i++)  {
   for (let j = 0; j < matriz[i].length; j++) {

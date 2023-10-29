@@ -9,13 +9,17 @@ function dividir(num) {
 
 dividir(256)
 
-function dobrar(num) {
+function dobrar(num, i = 0) {
   console.log(num)
-  dobrar(num * 2)
-}
+  if (i >= 10) {
+    return num
+  } else {
+  dobrar(num * 2, i += 1)
+  }}
+
+dobrar(2)
 
 function fatorial(num) {
-  console.log(num)
   if (num === 0) {
     return 1
   } else if (num > 0) {

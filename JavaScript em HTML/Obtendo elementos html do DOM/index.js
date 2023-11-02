@@ -16,4 +16,6 @@ function show() {
 
   const firstContact = document.querySelector("#contact-list > li > label");
   console.log(firstContact);
+  
 }
+

@@ -1,36 +1,46 @@
 function scalePlayer() {
-  const playerName = document.getElementById("playerName");
-  const playerPosition = document.getElementById("playerPosition");
-  const playerShirt = document.getElementById("playerShirt");
+  const playerName = document.getElementById("playerName").value;
+  const playerPosition = document.getElementById("playerPosition").value;
+  const playerShirt = document.getElementById("playerShirt").value;
   const playerSection = document.getElementById("playerSection");
 
   scaleConfirm = "";
+
   do {
     let scaleConfirm = prompt(
       "Deseja escalar o jogador " +
-        playerName.value +
+        playerName +
         " de camisa " +
-        playerShirt.value +
+        playerShirt +
         " na posição " +
-        playerPosition.value +
+        playerPosition +
         "?" +
         "\n" +
         "(Sim/Não)"
     );
-    if (scaleConfirm === "Sim") {
+
+    if (scaleConfirm === "Sim" || "sim") {
       const playerUl = document.createElement("ul");
-      playerUl.id = "player" + playerName.value;
+      playerUl.id = "player" + playerShirt;
+
       const nameLi = document.createElement("li");
-      nameLi.innerText = "Nome: " + playerName.value;
+      nameLi.innerText = "Nome: " + playerName;
+
       const positionLi = document.createElement("li");
-      positionLi.innerText = "Posição: " + playerPosition.value;
+      positionLi.innerText = "Posição: " + playerPosition;
+
       const shirtLi = document.createElement("li");
-      shirtLi.innerText = "Camiseta: " + playerShirt.value;
+      shirtLi.innerText = "Camiseta: " + playerShirt;
 
       playerSection.appendChild(playerUl);
       playerUl.append(nameLi, positionLi, shirtLi);
+
+      alert("O jogador " + playerName + " foi escalado com sucesso!");
+      document.getElementById("playerName").value = "";
+      document.getElementById("playerPosition").value = "";
+      document.getElementById("playerShirt").value = "";
       break;
-    } else if (scaleConfirm === "Não") {
+    } else if (scaleConfirm === "Não" || "não") {
       alert("O jogador não foi escalado.");
       break;
     } else {
@@ -40,11 +50,29 @@ function scalePlayer() {
 }
 
 function removePlayer() {
+  const shirtPlayer = document.getElementById("playerRemovalShirt").value;
   playerRemoved = "";
   do {
-    let playerToBeRemoved = parseFloat(
-      prompt("Qual o número da camiseta do jogador que será removido?")  
+    playerRemoved = prompt(
+      "Deseja mesmo remover o jogador camisa " + shirtPlayer + "?"
     );
-    playerRemoved = prompt("Deseja ")
+    if (playerRemoved === "Sim" || "sim") {
+      const removePlayerUl = document.getElementById("player" + shirtPlayer);
+      console.log(removePlayerUl);
+      if (removePlayerUl.id === "player" + shirtPlayer) {
+        alert("Removendo jogador");
+        playerSection.removeChild(removePlayerUl);
+        document.getElementById("playerRemovalShirt").value = "";
+        break;
+      } else {
+        alert("Jogador não encontrado");
+        break;
+      }
+    } else if (playerRemoved === "Não" || "não") {
+      alert("O jogador não foi removido.");
+      break;
+    } else {
+      alert("Opção inválida.");
+    }
   } while (playerRemoved != "Sim" || "Não");
 }

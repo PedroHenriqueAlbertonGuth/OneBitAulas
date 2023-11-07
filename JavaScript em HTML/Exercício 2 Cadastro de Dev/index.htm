@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <script src="index.js" defer></script>
+    <script src="resolução.js" defer></script>
     <title>Cadastro de devs</title>
   </head>
   <body>
@@ -12,22 +12,19 @@
     <hr />
     <form id="devForm">
       <div id="informationDiv">
-        <input
-          type="text"
-          name="fullName"
-          id="fullName"
-          placeholder="Nome completo"
-          required
-        />
-        <button id="newTecnologyButton" disabled>Adicionar</button>
+        <label for="fullName">Nome Completo: </label>
+        <input type="text" name="fullName" id="fullName" />
+        <br />
+        <br />
+        <label>Tecnologias</label> <br />
+        <button type="button" id="newTecnologyButton">Adicionar nova</button>
+        <ul id="stackInputs"></ul>
       </div>
       <br />
-      <button id="registerDev">Registrar desenvolvedor</button>
+      <button type="submit" id="registerDev">Registrar desenvolvedor</button>
     </form>
     <div>
-      <ul id="devSubmited">
-
-      </ul>
+      <ul id="devSubmited"></ul>
     </div>
   </body>
 </html>

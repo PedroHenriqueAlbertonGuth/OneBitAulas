@@ -15,17 +15,21 @@
     <title>Jogo da velha</title>
   </head>
   <body>
-    <main data-theme="light">
+    <main data-theme="dark">
       <header class="flex align-center justify-between">
         <h1>Jogo da velha</h1>
         <button id="themeSwitcher">Trocar tema</button>
       </header>
-      <div id="playersDiv">
+      <div id="playersDiv" class="flex align-center justify-between">
         <h1>Jogadores:</h1>
         <label for="playerOne">X</label>
-        <input type="text" id="playerOne" placeholder="Jogador 1" />
+        <input type="text" id="playerOne" placeholder="Jogador 1" /> <br />
         <label for="playerTwo">O </label>
         <input type="text" id="playerTwo" placeholder="Jogador 2" />
+      </div>
+      <div id="playAndResetBtn" class="flex align-center justify-between">
+        <button id="playBtn">Jogar</button>
+        <button id="resetBtn">Recomeçar</button>
       </div>
       <div id="gameDiv">
         <button type="button" data-value="1"></button>
@@ -38,6 +42,9 @@
         <button type="button" data-value="8"></button>
         <button type="button" data-value="9"></button>
       </div>
+      <section class="flex align-center justify-between">
+        <input type="text" id="playing" disabled />
+      </section>
     </main>
   </body>
 </html>

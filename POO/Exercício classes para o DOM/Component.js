@@ -1,30 +1,29 @@
 class Component {
-  #element;
+  #element = null;
   #user = "naag";
   #password = "1234";
-  newElement;
   innerText = "";
-  constructor(element) {
-    this.#element = element;
+  constructor(tag, parent, options) {
+    this.tag = tag;
+    this.parent = parent;
+    this.options = options;
     this.build();
   }
-  getElement(user, password) {
-    if (this.#autenthicate(user, password)) {
-      return this.#element;
-    } else {
-      console.log(`Usuário ou senha errados`);
-    }
-  }
-  #autenthicate(user, password) {
-    return this.#user === user && this.#password === password;
+  getElement() {
+    return this.#element;
   }
 
   build() {
-    this.newElement = document.createElement(this.#element);
-    this.newElement.innerText = this.innerText;
+    this.#element = document.createElement(this.tag);
+    Object.assign(this.#element, this.options);
+    return this;
   }
-  render(elementId) {
-    document.getElementById(elementId).appendChild(this.newElement);
+  render() {
+    if (this.parent instanceof Component) {
+      this.parent.getElement().append(this.#element);
+    } else {
+      document.querySelector(this.parent).append(this.#element);
+    } 
   }
 }
 

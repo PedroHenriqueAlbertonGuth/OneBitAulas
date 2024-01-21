@@ -1,20 +1,28 @@
 import Component from "./Component.js";
-import { Input, Label, Form } from "./Component.js";
+import { Input } from "./Input.js";
+import { Label } from "./Label.js";
+import { Form } from "./Form.js";
 
-const span = new Component("span");
-const input = new Input();
-const label = new Label("Abcdefg");
-const form = new Form("12");
+const title = new Component("h1", "body", { textContent: "Olá mundo!" });
+console.log(title);
+title.render();
 
-console.log(span.getElement("naag", "1234"));
+title.tag = "h3";
+title.build().render();
 
-console.log(span.newElement);
-span.render("components");
-span.build();
-span.render("components");
-input.render("inputs");
-label.render("labels");
-form.render("form");
-form.appendChild(span.newElement);
-form.appendChild(input.newElement);
-form.appendChild(label.newElement);
+const form = new Form("body");
+
+const label = new Label("Nome:", form, { htmlFor: "nameInput" });
+const input = new Input(form, { id: "nameInput", name: "name" });
+
+form.render();
+label.render();
+
+form.addChildren(input);
+
+form.addChildren(
+  new Component("br"),
+  new Component("br"),
+  new Label("Data de nascimento:", form, { htmlFor: "birthdayInput" }),
+  new Input(form, { id: "birthdayInput", name: "birthday", type: "date" })
+);

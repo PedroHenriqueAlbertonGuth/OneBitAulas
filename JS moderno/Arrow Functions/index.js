@@ -2,7 +2,7 @@ function normalSum(a, b) {
   return a + b;
 }
 
-console.loh(`Soma normal: ${normalSum(2, 2)}`);
+console.log(`Soma normal: ${normalSum(2, 2)}`);
 
 const anonymousSum = function (a, b) {
   return a + b;

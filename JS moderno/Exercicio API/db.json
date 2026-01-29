@@ -1,0 +1,12 @@
+{
+  "transacoes": [
+    {
+      "id": "0761",
+      "description": "ab",
+      "amount": "12",
+      "type": "income",
+      "category": "ac",
+      "date": "2026-01-29"
+    }
+  ]
+}

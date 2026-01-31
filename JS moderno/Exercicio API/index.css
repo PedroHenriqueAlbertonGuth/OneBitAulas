@@ -144,7 +144,7 @@ button:active {
   color: #10b981;
 }
 
-.stat-box.income {
+.stat-box.Receita {
   border-left-color: #10b981;
 }
 
@@ -180,11 +180,11 @@ button:active {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
-.transaction-item.income {
+.transaction-item.Receita {
   border-left-color: #10b981;
 }
 
-.transaction-item.expense {
+.transaction-item.Despesa {
   border-left-color: #ef4444;
 }
 
@@ -205,17 +205,17 @@ button:active {
 }
 
 .amount {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   font-weight: bold;
   min-width: 100px;
   text-align: right;
 }
 
-.amount.income {
+.amount.Receita {
   color: #10b981;
 }
 
-.amount.expense {
+.amount.Despesa {
   color: #ef4444;
 }
 
@@ -223,10 +223,10 @@ button:active {
   background: #f5f4f4;
   color: white;
   border: none;
-  padding: 4px 6px;
+  padding: 5px 6px;
   border-radius: 5px;
   cursor: pointer;
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   transition: background 0.2s;
   width: auto;
 }

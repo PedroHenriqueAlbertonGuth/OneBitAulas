@@ -8,7 +8,7 @@
   </head>
   <body>
     <div class="container">
-      <h1>💰 Gerenciador de Transações</h1>
+      <h1>💰 Registro financeiro! 💰</h1>
 
       <div class="main-content">
         <form class="form-section" id="transactionForm">
@@ -42,8 +42,8 @@
             <label for="type">Tipo:</label>
             <select id="type" name="type" required>
               <option value="">Selecione um tipo</option>
-              <option value="income">Receita</option>
-              <option value="expense">Despesa</option>
+              <option value="Receita">Receita</option>
+              <option value="Despesa">Despesa</option>
             </select>
           </div>
 
@@ -69,7 +69,7 @@
         <div class="transactions-section" style="grid-column: 1">
           <h2>Resumo</h2>
           <div class="stats">
-            <div class="stat-box income">
+            <div class="stat-box Receita">
               <h3>Receitas</h3>
               <p id="totalIncome">R$ 0,00</p>
             </div>
@@ -89,7 +89,9 @@
         <h2>Transações</h2>
         <div id="transactionsDiv" class="transactions-div">
           <ul id="transactionsList" class="transacations-list"></ul>
-          <div class="empty-message">Nenhuma transação registrada</div>
+          <div id="empty-message" class="empty-message">
+            Nenhuma transação registrada
+          </div>
         </div>
       </div>
     </div>

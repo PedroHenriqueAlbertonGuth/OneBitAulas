@@ -30,4 +30,8 @@ const spaceshipName = prompt("Insira o nome da nave") ?? "Nave Desconhecida";
 const captainName =
   prompt("Insira o nome do capitão") ?? "Capitão Desconhecido";
 
-sendSpaceship(spaceshipName, captainName);
+const currentShip = sendSpaceship(spaceshipName, captainName);
+
+const speed = Number(prompt("Insira a velocidade que deseja acelerar"));
+
+accelerate(speed, currentShip);
